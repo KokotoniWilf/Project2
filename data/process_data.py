@@ -109,7 +109,7 @@ def save_data(df, database_filepath):
     
     # load dataframe to sqlite database
     engine = create_engine(f'sqlite:///{database_filepath}')
-    df.to_sql('CategorizedMessages', engine, index=False)
+    df.to_sql('CategorizedMessages', engine, index=False, if_exists='replace')
  
     
 def main():

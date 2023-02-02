@@ -56,7 +56,7 @@ def index():
     genre_counts = df.groupby('genre').count()['message']
     genre_names = list(genre_counts.index)
     
-    category_df = df.drop(['message','original','genre','id'], axis=1)
+    category_df = df.drop(['message','original','genre','id','related','money'], axis=1)
     category_counts = category_df.sum(axis=0)
     category_names = category_df.columns
 
