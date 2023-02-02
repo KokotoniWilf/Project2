@@ -61,6 +61,8 @@ The app includes visualisations showing the distribution of genres and categorie
 
 ## File Descriptions
 
+All files are stored in the GitHub repository: https://github.com/KokotoniWilf/Project2
+
 The files related to this project are as follows:
 
 This README.md file, which contains information relating to the project aims and system requirements.
