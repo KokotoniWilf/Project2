@@ -64,21 +64,21 @@ The files related to this project are as follows:
 
 This README.md file, which contains information relating to the project aims and system requirements.
 
-- app
-| - templates
-| |- master.html  # main page of web app
-| |- go.html  # classification result page of web app
-|- run.py  # Flask file that runs app
+- app (folder)
+	- templates (folder)
+		- master.html  			# main page of web app
+		- go.html  				# classification result page of web app
+	- run.py  					# Flask file that runs app
 
-- data
-|- disaster_categories.csv  # data to process 
-|- disaster_messages.csv  # data to process
-|- process_data.py
-|- InsertDatabaseName.db   # database to save clean data to
+- data (folder)
+	- disaster_categories.csv	# data to process 
+	- disaster_messages.csv		# data to process
+	- process_data.py			# data cleaning pipeline script
+	- DisasterResponse.db   	# database to save clean data to
 
-- models
-|- train_classifier.py
-|- classifier.pkl  # saved model 
+- models (folder)
+	- train_classifier.py		# machine learning pipeline script
+	- classifier.pkl  			# saved model (too large to upload to GitHub)
 
 
 ## How to interact with the project
