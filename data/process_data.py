@@ -80,6 +80,9 @@ def clean_data(df):
         # convert column from string to numeric
         categories[column] =  categories[column].astype(int)
     
+    # replace 2s with 1s in Related column
+    categories['related'] = categories['related'].replace(to_replace=2, value=1)
+    
     # drop the original categories column from `df`
     
     df.drop(columns='categories',inplace=True)
