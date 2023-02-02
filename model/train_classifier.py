@@ -11,7 +11,7 @@ Tis model is then packaged as a Pickle file for use in a web app.
 """
 
 import nltk
-nltk.download(['punkt', 'wordnet'])
+nltk.download(['punkt', 'wordnet', 'stopwords'])
 
 # import libraries
 import pandas as pd
@@ -22,6 +22,7 @@ from sqlalchemy import create_engine
 from sklearn.pipeline import Pipeline
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
+from nltk.corpus import stopwords
 from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 from sklearn.multioutput import MultiOutputClassifier
 from sklearn.ensemble import RandomForestClassifier
@@ -88,6 +89,10 @@ def tokenize(text):
     
     # tokenise the words
     tokens = word_tokenize(text)
+    
+    # remove stopwords
+    stop_words = set(stopwords.words('english'))
+    tokens = [tok for tok in tokens if tok not in stop_words]
 
     # lemmatize words, convert all to lower case and strip whitespace
     lemmatizer = WordNetLemmatizer()
@@ -258,4 +263,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()  
+    main() 

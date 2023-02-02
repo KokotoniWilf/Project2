@@ -17,7 +17,7 @@ from sqlalchemy import create_engine
 For Machine Learning Pipeline script (train_classifier.py):
 ```python
 import nltk
-nltk.download(['punkt', 'wordnet'])
+nltk.download(['punkt', 'wordnet', 'stopwords'])
 import pandas as pd
 import re
 import pickle
@@ -26,6 +26,7 @@ from sqlalchemy import create_engine
 from sklearn.pipeline import Pipeline
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
+from nltk.corpus import stopwords
 from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 from sklearn.multioutput import MultiOutputClassifier
 from sklearn.ensemble import RandomForestClassifier
