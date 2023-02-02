@@ -95,3 +95,4 @@ Execute the following commands (the first 2 steps should be run in the project r
 ## Licensing, Authors, Acknowledgements, etc
 
 The template code for the web app was provided by Udacity.
+
