@@ -55,7 +55,7 @@ def load_data(database_filepath):
     
     # define feature and target variables X and y
     X = df['message']
-    y = df.drop(['message','original','genre','id','related','money'], axis=1)
+    y = df.drop(['message','original','genre','id','related'], axis=1)
     
     return X,y
 
